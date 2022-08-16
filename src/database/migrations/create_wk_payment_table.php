@@ -54,6 +54,7 @@ class CreateWkPaymentTable extends Migration
             $table->string('branch_id', 10)->nullable();
             $table->string('account_number', 20);
             $table->string('account_name');
+            $table->json('options')->nullable();
 
             $table->timestampsTz();
             $table->softDeletes();
@@ -79,6 +80,7 @@ class CreateWkPaymentTable extends Migration
             $table->string('url_return')->nullable();
             $table->string('hash_key_invoice')->nullable();
             $table->string('hash_iv_invoice')->nullable();
+            $table->json('options')->nullable();
 
             $table->timestampsTz();
             $table->softDeletes();
@@ -102,6 +104,7 @@ class CreateWkPaymentTable extends Migration
             $table->string('currency');
             $table->string('locale', 5);
             $table->string('intent');
+            $table->json('options')->nullable();
 
             $table->timestampsTz();
             $table->softDeletes();
@@ -126,6 +129,7 @@ class CreateWkPaymentTable extends Migration
             $table->string('cashier')->nullable();
             $table->string('url_return')->nullable();
             $table->unsignedInteger('timeout')->default(300000);
+            $table->json('options')->nullable();
 
             $table->timestampsTz();
             $table->softDeletes();

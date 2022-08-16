@@ -28,7 +28,8 @@ class TTPay extends UuidEntity
             'ccy', 'lang',
             'salesman', 'cashier',
             'url_return',
-            'timeout'
+            'timeout',
+            'options',
         ]);
 
         parent::__construct($attributes);
